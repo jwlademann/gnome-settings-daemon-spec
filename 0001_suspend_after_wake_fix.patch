@@ -1,0 +1,25 @@
+From b6f213ab270dd69a9832569520bc032dd5cd2bee Mon Sep 17 00:00:00 2001
+From: Chaz Maschman <135163-wow@users.noreply.gitlab.gnome.org>
+Date: Tue, 11 Nov 2025 03:42:58 +0000
+Subject: [PATCH] Attempt to fix !903
+
+---
+ plugins/power/gsd-power-manager.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/plugins/power/gsd-power-manager.c b/plugins/power/gsd-power-manager.c
+index 490b5536d..70ff14c0c 100644
+--- a/plugins/power/gsd-power-manager.c
++++ b/plugins/power/gsd-power-manager.c
+@@ -2702,7 +2702,7 @@ engine_session_properties_changed_cb (GDBusProxy      *session,
+                 /* when doing the fast-user-switch into a new account,
+                  * ensure the new account is undimmed and with the backlight on */
+                 if (active)
+-                        idle_set_mode (manager, GSD_POWER_IDLE_MODE_NORMAL);
++                        idle_set_mode_no_temp (manager, GSD_POWER_IDLE_MODE_NORMAL);
+                 iio_proxy_maybe_claim_light (manager);
+                 g_variant_unref (v);
+ 
+-- 
+GitLab
+
