@@ -14,7 +14,7 @@
 
 Name:           gnome-settings-daemon
 Version:        49.1
-Release:        2%{?dist}.jwl
+Release:        3%{?dist}.jwl
 Summary:        The daemon sharing settings from GNOME to GTK+/KDE applications
 
 License:        GPL-2.0-or-later AND LGPL-2.1-or-later
