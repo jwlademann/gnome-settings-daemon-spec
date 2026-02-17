@@ -1,0 +1,13 @@
+diff --git a/plugins/power/gsd-power-manager.c b/plugins/power/gsd-power-manager.c
+index e98cb844..652ff5d8 100644
+--- a/plugins/power/gsd-power-manager.c
++++ b/plugins/power/gsd-power-manager.c
+@@ -3113,7 +3113,7 @@ gsd_power_manager_startup (GApplication *app)
+         if (g_strcmp0 (chassis_type, "tablet") == 0 || g_strcmp0 (chassis_type, "handset") == 0) {
+                 manager->show_sleep_warnings = FALSE;
+         } else {
+-                manager->show_sleep_warnings = TRUE;
++                manager->show_sleep_warnings = FALSE;
+         }
+ 
+         manager->settings = g_settings_new (GSD_POWER_SETTINGS_SCHEMA);

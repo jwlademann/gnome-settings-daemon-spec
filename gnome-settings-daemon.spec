@@ -14,7 +14,7 @@
 
 Name:           gnome-settings-daemon
 Version:        49.1
-Release:        3%{?dist}.jwl
+Release:        4%{?dist}.jwl
 Summary:        The daemon sharing settings from GNOME to GTK+/KDE applications
 
 License:        GPL-2.0-or-later AND LGPL-2.1-or-later
@@ -24,6 +24,7 @@ Source0:        https://download.gnome.org/sources/%{name}/%{major_version}/%{na
 # gsetting overrides for the "Server with GUI" installation
 Source1:    	org.gnome.settings-daemon.plugins.power.gschema.override
 Patch1:  	0001_suspend_after_wake_fix.patch
+Patch2:  	0002_dont_show_sleep_warnings.patch
 
 BuildRequires:  gcc
 BuildRequires:  gettext
